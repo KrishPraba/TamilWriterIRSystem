@@ -39,7 +39,8 @@ Project
 
 **_Project Architecture_**
 
-    ![ArchitectureIRSystem](https://github.com/KrishPraba/TamilWriterIRSystem/blob/master/image/Architecture_IR_System.PNG)
+    
+![ArchitectureIRSystem](https://github.com/KrishPraba/TamilWriterIRSystem/blob/master/image/Architecture_IR_System.PNG)
 
 
 
