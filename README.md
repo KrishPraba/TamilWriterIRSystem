@@ -39,7 +39,7 @@ Project
 
 **_Project Architecture_**
 
-    ![Architecture IR System]("image/Architecture IR System.PNG")
+    [Architecture IR System](image/Architecture_IR_System.PNG)
 
 
 
