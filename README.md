@@ -1,4 +1,4 @@
-# ThamizhWriterSearchEngine
+# TamilWriterIRSystem
 
 Implemented as part of the CS4642 - Data Mining & Information Retrieval. 
 
@@ -39,7 +39,9 @@ Project
 
 **_Project Architecture_**
 
-    ![Architecture IR System](https://user-images.githubusercontent.com/46758295/143048279-5aee758e-5e33-4056-9208-415d136288eb.PNG)
+    ![Architecture IR System](image/Architecture IR System.PNG)
+
+
 
 
 ## Data Scraping
@@ -84,6 +86,8 @@ Significant preprocessing was done on most of the text fields. Especially on the
 3. Extracting the age from the Date of Birth and Date of Death
 4. Spliting the Date of Birth and Place of Birth into separate fields
 5. Listing the novels written by writer from the extracted data as an array
+
+
 
 
 
@@ -168,6 +172,8 @@ Full text fields and fields that need to be analyzed when querying was set when 
 - அறியப்படுவது - Achievements (Text)
 - முக்கிய வார்த்தைகள் - Keywords that can be used to identify writers (Text)
 - பிறந்த இடம் - Place of birth (Text)
+
+
 
 
 ## Querying
