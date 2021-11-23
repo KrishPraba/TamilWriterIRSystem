@@ -5,7 +5,7 @@ Implemented as part of the CS4642 - Data Mining & Information Retrieval.
 Task : Creating an information retrieval system on famous people. This system is based on famous writers made using the native language **Tamil**.
 
 **_Dataset_**
-Dataset : **226** records on famous writers (in Tamil)
+Dataset : **227** records on famous writers (in Tamil)
 
 __Pre-requisites__
 
@@ -26,14 +26,14 @@ Project
 │   │   README.md
 │   │   scraper.py - Scraping functions and saving raw data
 |   │   pre-processing.py - Preprocessing functions and saving pre-processed data 
-|   │   indexing.py  - Indexing data into Elasticsearch 
+|   │   upload_data.py  - Indexing data into Elasticsearch 
 │   │   search.py - Queries executed on the indexed data
 └───dataset
 │   │   famous_writer_raw.json - Raw scraped data from scraper.py
 │   │   famous_writer_preprocessed.json - Cleaned data from preeprocessing.py
 │   
-└───images - Architecture and Pipeline diagrams
-    │   Project_Architecture_Diagram
+└───image - Architecture and Pipeline diagrams
+    │   Architecture_IR_System image
 
 ```
 
