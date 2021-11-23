@@ -2,7 +2,7 @@
 
 Implemented as part of the CS4642 - Data Mining & Information Retrieval. 
 
-Task : Creating an information retrieval system on famous people. This system is based on famous writers made using the native language **Tamil**.
+Task : Creating an Information Retrieval system on famous people. This system is based on famous writers made using the native language **Tamil**.
 
 **_Dataset_**
 Dataset : **227** records on famous writers (in Tamil)
@@ -11,7 +11,7 @@ __Pre-requisites__
 
   1. Wikipedia and BeautifulSoup python modules for scraping data
   2. Nltk library for cleaning data
-  3. ElasticSearch for indexing data
+  3. ElasticSearch for indexing and querying data
 
 **_Project Components_** 
   1. Scraping 
@@ -86,7 +86,7 @@ Significant preprocessing was done on most of the text fields. Especially on the
 2. Removing english alphabet letters from the text fields
 3. Extracting the age from the Date of Birth and Date of Death
 4. Spliting the Date of Birth and Place of Birth into separate fields
-5. Listing the novels written by writer from the extracted data as an array
+5. Listing the novels written by the writer as an array
 
 
 
@@ -96,7 +96,7 @@ Significant preprocessing was done on most of the text fields. Especially on the
 
 Cleaned data was indexed in Elasticsearch using the Bulk API of Elasticsearch python client. 
 
-A custom analyzer was created with on the text fields with appropriate custom filters. The custom filter contained tamil_stopper, indic_normalizer and tamil_stemmer for removing stopwords, normalizing Unicode representation of text and stemming the text. The custom analyzer was added when creating the index.
+A custom analyzer was created on the text fields with appropriate custom filters. The custom filter contained tokenizer, tamil_stopper, indic_normalizer and tamil_stemmer for tokenizing text, removing stopwords, normalizing Unicode representation of text and stemming the text. The custom analyzer was added when creating the index.
 
  ```json
 {
@@ -164,7 +164,7 @@ A custom analyzer was created with on the text fields with appropriate custom fi
 
 ```
 
-Full text fields and fields that need to be analyzed when querying was set when mapping properties. The fields that was set to be analyzed were :
+Full text fields and fields that need to be analyzed when querying, was set when mapping properties. The fields that was set to be analyzed were :
 
 - சுருக்கம் - Introduction (Full Text)
 - தகவல் - Content (Text)
@@ -203,13 +203,13 @@ Searches documents that contain terms matching a wildcard pattern as specified i
 Searches documents that contain terms within a provided range specified in the query using lte (less than or equal to ) and gte (greater than or equal to)
 
 8. More Like This Query
-searches documents contains terms that are "like" the terms specified in the query
+searches documents contains terms that are "like" the terms specified in the query. Used to perform text mining and classification on data.
 
 9. Multi Match Query with Term Aggregation
 The multi_match query builds on the match query to allow multi-field to be searched on the query text. The results of this query are aggregated into buckets of unique terms in the fields specified
 
 10. Multi Match Query with Range Aggregation
-A multi match query results are aggregated into buckets with a set of ranges each representing a bucket
+A multi match query results are aggregated into buckets with a set of ranges each representing a bucket. Aggregations are used for faceting.
 
 
 The query examples for each of this type of query is given in the **_search.py_** file
